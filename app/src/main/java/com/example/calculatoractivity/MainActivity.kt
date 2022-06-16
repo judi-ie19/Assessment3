@@ -5,25 +5,38 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 
 class MainActivity : AppCompatActivity() {
-    lateinit var etnum1:EditText
-    lateinit var etnum2:EditText
-    lateinit var btnadd:Button
+    lateinit var tilnum1:TextInputLayout
+    lateinit var tilnum2:TextInputLayout
+    lateinit var etnum1:TextInputEditText
+    lateinit var etnum2:TextInputEditText
     lateinit var btnsubtract:Button
+    lateinit var btnadd:Button
     lateinit var btndivide:Button
     lateinit var btnmodulus:Button
     lateinit var tvresult:TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        etnum1=findViewById(R.id.etnum1)
-        etnum2=findViewById(R.id.etnum2)
-        btnadd=findViewById(R.id.btnadd)
-        btnsubtract=findViewById(R.id.btnsubtract)
-        btndivide=findViewById(R.id.btndivide)
-        btnmodulus=findViewById(R.id.btnmodulus)
-        tvresult=findViewById(R.id.tvresult)
+        tilnum1 = findViewById(R.id.tilnum1)
+        tilnum2 = findViewById(R.id.tilnum2)
+        etnum1 = findViewById(R.id.etnum1)
+        etnum2 = findViewById(R.id.etnum2)
+        btnadd = findViewById(R.id.btnadd)
+        btnsubtract = findViewById(R.id.btnsubtract)
+        btndivide = findViewById(R.id.btndivide)
+        btnmodulus = findViewById(R.id.btnmodulus)
+        tvresult = findViewById(R.id.tvresult)
+
+
+        fun validate(){
+            var error=false
+            var tilnum1=tilnum1.error
+            var tilnum2=tilnum2.error
+        }
 
         btnadd.setOnClickListener {
             var num1=etnum1.text.toString().toInt()
