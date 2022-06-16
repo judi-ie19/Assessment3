@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         tvresult.text=division.toString()
     }
     fun modulus(num1: Int,num2: Int){
-        var  mod=num1%num2
-        tvresult.text.toString()
+        var  modulus=num1%num2
+        tvresult.text=modulus.toString()
     }
 }
